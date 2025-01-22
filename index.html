@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 5px 0; }
+    </style>
+</head>
+<body>
+<div class="addTask">
+    <input type="text" id="taskInput" placeholder="Add a new task">
+    <button onclick="addTask()" style="color: white">X</button>
+</div>
+
+
+<div class="toDo">
+    <p id="count" style="color: white; float: left"> </p>
+    <ul id="taskList"></ul>
+
+</div>
+<!--<p>&#10005;</p>-->
+<script src="index.js"></script>
+</body>
+</html>
