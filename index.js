@@ -34,14 +34,14 @@ function loadTask() {
 
 
         const checkImg = document.createElement('img');
-        checkImg.src = item.completed ? "/img/Check.svg" : "/img/Check.svg";
+        checkImg.src = item.completed ? "./img/Check.svg" : "./img/Check.svg";
         checkImg.style.width = "40px";
         checkImg.style.cursor = "pointer";
 
         checkImg.addEventListener('click', () => {
             item.completed = !item.completed;
             taskText.style.textDecoration = item.completed ? 'line-through' : 'none';
-            checkImg.src = item.completed ? "/img/Check.svg" : "/img/Check.svg";
+            checkImg.src = item.completed ? "./img/Check.svg" : "./img/Check.svg";
             const count =objArr.length;
             console.log(count);
             document.getElementById("count").innerHTML = item.completed ? "Tasks to do " + (count - 1) : "Tasks to do " + objArr.length;
@@ -53,7 +53,7 @@ function loadTask() {
 
         const button = document.createElement('button');
         const img = document.createElement('img');
-        img.src = "/img/bin.svg";
+        img.src = "./img/bin.svg";
         img.style.width = "40px";
         button.appendChild(img);
 
