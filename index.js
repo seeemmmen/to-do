@@ -20,8 +20,7 @@ function addTask() {
 }
 
 function loadTask() {
-    document.getElementById("count").innerHTML="Tasks to do "+objArr.length;
-
+    updateTaskCount();
     let task = document.getElementById('taskList');
     task.innerHTML = "";
 
@@ -42,10 +41,12 @@ function loadTask() {
             item.completed = !item.completed;
             taskText.style.textDecoration = item.completed ? 'line-through' : 'none';
             checkImg.src = item.completed ? "./img/Check.svg" : "./img/Check.svg";
-            const count =objArr.length;
+            console.log(item.completed);
+
             console.log(count);
-            document.getElementById("count").innerHTML = item.completed ? "Tasks to do " + (count - 1) : "Tasks to do " + objArr.length;
             saveTasks();
+            updateTaskCount();
+
         });
 
 
@@ -77,7 +78,10 @@ function loadTask() {
     });
 }
 
-
+function updateTaskCount() {
+    const remainingTasks = objArr.filter(item => !item.completed).length;
+    document.getElementById("count").innerHTML = "Tasks to do " + remainingTasks;
+}
 
 function deleteItem(index,listItem) {
     listItem.classList.add("fade");
