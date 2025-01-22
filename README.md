@@ -9,9 +9,11 @@ Features
 	•	Set due dates for tasks
 	•	User-friendly interface for seamless task management
 
+
 Installation & Usage
 
-This is a web-based application. Simply visit seeemmmen.github.io/to-do to start managing your tasks instantly—no installation required!
+This is a web-based application. 
+Simply visit seeemmmen.github.io/to-do to start managing your tasks instantly—no installation required!
 
 Technologies Used
 	•	HTML, CSS, JavaScript
